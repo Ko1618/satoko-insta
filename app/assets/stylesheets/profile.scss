@@ -1,0 +1,46 @@
+.profile {
+
+  &_header {
+    margin-top : 20px;
+    margin-bottom : 30px;
+  }
+
+  &_back_icon img {
+    width : 20px;
+  }
+
+  &_username {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     text-align : center;
+     position :relative;
+     top : -25px;
+     font-weight : bold;
+     pointer-events : none;
+     font-size : 20px;
+  }
+  
+  &_usericon {
+    margin-top: 100px;
+    width: 76px;
+    height: 76px;
+    border-radius: 99px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.avatar {
+
+  &_edit_form {
+    margin-top : 30px; 
+  }
+
+  &_submit_btn {
+    border : none;
+    margin-left : 5px;
+    color: #4F4F4F;
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+}
+
