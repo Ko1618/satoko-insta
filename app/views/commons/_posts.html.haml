@@ -1,0 +1,6 @@
+.post_container
+  - posts.each do |post|
+    .post#post-index{data:{post_id: post.id}}
+      = post.content
+      - post.images.each do |image|
+        = image_tag(image)

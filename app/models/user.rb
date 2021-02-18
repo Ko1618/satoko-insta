@@ -7,8 +7,17 @@ class User < ApplicationRecord
   validates :account, presence: true, uniqueness: true
 
   has_one :profile, dependent: :destroy
+  has_many :posts, dependent: :destroy
 
   def prepare_profile
     profile || build_profile
+  end
+
+  def avatar_image
+    if profile&.avatar&.attached?
+      profile.avatar
+    else
+      'Ellipse.png'
+    end
   end
 end
