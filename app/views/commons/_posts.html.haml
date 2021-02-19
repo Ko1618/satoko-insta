@@ -1,6 +1,10 @@
 .post_container
   - posts.each do |post|
     .post#post-index{data:{post_id: post.id}}
-      = post.content
-      - post.images.each do |image|
-        = image_tag(image)
+      .avatar
+        - if user_signed_in? && post.user_id == current_user.id
+          = link_to profile_path do
+            = image_tag post.user.avatar_image, class: 'usericon'
+        - else
+          = link_to account_path(post.user) do
+            = image_tag post.user.avatar_image, class: 'usericon'
