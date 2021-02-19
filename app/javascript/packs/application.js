@@ -10,13 +10,29 @@ require("channels")
 
 
 
+
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
 // or the `imagePath` JavaScript helper below.
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-
+import $ from 'jquery'
 import 'bootstrap';
 import '../stylesheets/application';
-require('packs/test.js')
+import axios from 'axios'
+import { csrfToken } from 'rails-ujs'
+
+axios.defaults.headers.common['X-CSRF-Token'] = csrfToken()
+
+document.addEventListener('turbolinks:load', function() {
+
+  $('.profile_usericon').on('click', () => {
+    if ($('.avatar_edit_form').hasClass('hidden')){
+      $('.avatar_edit_form').removeClass('hidden')
+    } else {
+      $('.avatar_edit_form').addClass('hidden')
+    }
+  })
+})
+  
