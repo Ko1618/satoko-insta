@@ -1,17 +1,16 @@
-.image-container
+.top_image 
   = image_tag 'Rectangle.png'
-.container 
+.container
   = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
     .field
-      = f.label :Email
+      = f.label :email, class: 'form_text'
       %br/
-      = f.email_field :email, autofocus: true, autocomplete: "email"
+      = f.email_field :email, autofocus: true, autocomplete: "email", class: 'form'
     .field
-      = f.label :Password
+      = f.label :password, class: 'form_text'
       %br/
-      = f.password_field :password, autocomplete: "current-password"
-    .forgot
-      = link_to "Forgot your password?", new_password_path(resource_name)
+      = f.password_field :password, autocomplete: "current-password", class: 'form'
     .actions
-      = f.submit "LOGIN"
-  = link_to "Sign up", new_registration_path(resource_name)
+      = f.submit "LOGIN", class: 'submit_btn'
+  = render "devise/shared/links"
+  = link_to 'TOP', root_path, class: 'link_to_top'

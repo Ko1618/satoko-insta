@@ -17,13 +17,15 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-import $ from 'jquery'
+//import $ from 'jquery'
+import axios from 'axios'
+//import { csrfToken } from 'rails-ujs'
+
+//axios.defaults.headers.common['X-CSRF-Token'] = csrfToken()
+
 import 'bootstrap';
 import '../stylesheets/application';
-import axios from 'axios'
-import { csrfToken } from 'rails-ujs'
 
-axios.defaults.headers.common['X-CSRF-Token'] = csrfToken()
 
 document.addEventListener('turbolinks:load', function() {
 
