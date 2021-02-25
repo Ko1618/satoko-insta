@@ -4,8 +4,10 @@
 // that code so it'll be compiled.
 
 require("@rails/ujs").start()
+require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+
 
 
 
@@ -15,5 +17,24 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+//import $ from 'jquery'
+import axios from 'axios'
+//import { csrfToken } from 'rails-ujs'
 
-require('packs/test.js')
+//axios.defaults.headers.common['X-CSRF-Token'] = csrfToken()
+
+import 'bootstrap';
+import '../stylesheets/application';
+
+
+document.addEventListener('turbolinks:load', function() {
+
+  $('.profile_usericon').on('click', () => {
+    if ($('.avatar_edit_form').hasClass('hidden')){
+      $('.avatar_edit_form').removeClass('hidden')
+    } else {
+      $('.avatar_edit_form').addClass('hidden')
+    }
+  })
+})
+  

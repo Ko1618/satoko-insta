@@ -1,0 +1,21 @@
+.post_container
+  - posts.each do |post|
+    .post#post-index{data:{post_id: post.id}}
+      .avatar
+        - if user_signed_in? && post.user == current_user
+          = link_to profile_path do
+            = image_tag post.user.avatar_image, class: 'usericon'
+        - else
+          = link_to other_path(post.user) do
+            = image_tag post.user.avatar_image, class: 'usericon'
+
+      .post_user
+        = post.user.account
+      .post_time
+        %time= time_ago_in_words(post.created_at)+'前'
+      = render '/commons/images', post: post
+
+      .delete 
+        - if user_signed_in? && post.user == current_user
+          = link_to '削除する', post_path(post), data: { method: 'delete', confirm: '本当に削除してもよろしいですか'}, class: 'delete_btn'
+       

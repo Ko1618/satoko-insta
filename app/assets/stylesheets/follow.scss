@@ -1,0 +1,36 @@
+.follow-header {
+  margin-top : 20px;
+  margin-bottom : 40px;
+}
+
+.follow_back_icon img{
+  
+  width : 20px;
+}
+
+.follow_title {
+  text-align : center;
+  position : relative;
+  font-weight : bold;
+  top : -60px;
+  pointer-events : none;
+} 
+
+
+.follow_list {
+  padding-top : 15px;
+  padding-bottom :15px;
+  margin-bottom : 5px;
+  border-bottom: 1px solid #EEEEEE;
+}
+
+.follow_usericon {
+  width : 40px;
+  border-radius: 100%;
+  float : left ;
+}
+
+.follow_name {
+  font-size :14px; 
+  margin-left : 10px;
+}

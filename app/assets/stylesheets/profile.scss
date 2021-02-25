@@ -1,46 +1,155 @@
-.profile {
+.profile_usericon{
+  margin-top: 100px;
+  width: 76px;
+  height: 76px;
+  border-radius: 99px;
+  margin: 0 auto;
+  display: block;
+}
 
-  &_header {
-    margin-top : 20px;
-    margin-bottom : 30px;
-  }
+.account_header {
+  display :flex;
+  justify-content : space-between;
+  margin-top : 20px;
+  margin-bottom  :30px;
+}
 
-  &_back_icon img {
-    width : 20px;
-  }
+.back_icon img {
+  width : 20px;
+}
 
-  &_username {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-     text-align : center;
-     position :relative;
-     top : -25px;
-     font-weight : bold;
-     pointer-events : none;
-     font-size : 20px;
-  }
+.follow_btn {
+  color: #BDBDBD;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size : 18px;
+}
+
+.account_username {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  position : relative;
+  top : -55px;
+  text-align : center;
+  font-weight : bold;
+  pointer-events : none;
+  font-size : 20px;
+}
+
+
+.account_status {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
   
-  &_usericon {
-    margin-top: 100px;
-    width: 76px;
-    height: 76px;
-    border-radius: 99px;
-    margin: 0 auto;
-    display: block;
-  }
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  justify-content: center;
+  margin-top: 50px;
+  margin-left: 20px;
 }
 
-.avatar {
-
-  &_edit_form {
-    margin-top : 30px; 
-  }
-
-  &_submit_btn {
-    border : none;
-    margin-left : 5px;
-    color: #4F4F4F;
-    background-color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
+.following_count {
+  margin-left: 50px;
+  margin-right :50px;
 }
 
+.follower_count {
+  text-decoration: none;
+}
+
+.followers_title {
+  text-align: center;
+  margin-top: -33px;
+  margin-bottom: 50px;
+}
+
+.status-text {
+  text-decoration: none;
+  color: gray;
+}
+
+.follow_name {
+  padding-left:50px;
+  font-size: 20px;
+}
+
+.figure-1 {
+  margin-left: 11px;
+}
+
+.figure-2 {
+  margin-left: 22px;
+  text-decoration: none;
+  color: black;
+}
+  
+.figure-3 {
+  margin-left: 23px;
+  text-decoration: none;
+  color: black;
+}
+
+.img-container {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.box {
+  width: 112px;
+  height: 105px;
+  text-align: center;
+  border-radius: 2px;
+  padding-right: 1px;
+  padding-bottom: 1px;
+}
+
+.img-container-top {
+  padding-top: 40px;
+}
+
+.avatar_edit_form {
+  margin-top : 30px; 
+}
+  
+.avatar_submit_btn {
+  border : none;
+  margin-left : 5px;
+  color: #4F4F4F;
+  
+  background-color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.images_form_avatar {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-left : 5px;
+  color: #4F4F4F;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 18px;
+  padding-bottom: 15px;
+}
+
+.image_form {
+  display: none;
+}
+
+.profile_header {
+  margin-top : 20px;
+  margin-bottom : 30px;
+}
+
+.profile_back_icon img{
+  width : 20px;
+}
+
+.profile_username {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align : center;
+  position :relative;
+  top : -25px;
+  font-weight : bold;
+  pointer-events : none;
+  font-size : 20px;
+}
